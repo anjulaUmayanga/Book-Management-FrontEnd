@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #E82561;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.custom-icon:hover {
+    transform: scale(1.2);
+}
+
+.custom-icon path {
+    stroke-width: 1.5;
+}
+
+.custom-icon.custom-color {
+    stroke: #E82561;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.custom-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    stroke: #000;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.icon-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-icon {
+    width: 40px;
+    height: 40px;
+    stroke: #E82561;
+    fill: none;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field:focus {
+    border-color: #E82561;
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #E82561;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #D31851;
+}
+
+.update-btn {
+    background-color: #FFC107;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.edit-btn {
+    background-color: #17a2b8;
+}
+
+.edit-btn:hover {
+    background-color: #138496;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.book-table th,
+.book-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-table th {
+    background-color: #f8f9fa;
+}
+
+.book-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+

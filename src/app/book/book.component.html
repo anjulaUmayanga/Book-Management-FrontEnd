@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="icon-container">
+        <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+        </svg>
+        <h2>Book Management</h2>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="input-field" id="title" [(ngModel)]="newBook.title" placeholder="Enter book title" required>
+
+        <label for="author">Author</label>
+        <input type="text" class="input-field" id="author" [(ngModel)]="newBook.author" placeholder="Enter author name" required>
+
+        <label for="isbn">ISBN</label>
+        <input type="text" class="input-field" id="isbn" [(ngModel)]="newBook.isbn" placeholder="Enter ISBN" required>
+
+        <label for="publicationDate">Publication Date</label>
+        <input type="date" class="input-field" id="publicationDate" [(ngModel)]="newBook.publicationDate" required>
+
+        <button class="btn" (click)="addBook()">Add Book</button>
+        <button *ngIf="isEditing" class="btn update-btn" (click)="updateBook()">Update Book</button>
+    </div>
+
+   
+    <table class="book-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Publication Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.publicationDate | date:'yyyy-MM-dd' }}</td>
+                <td>
+                    <button class="btn edit-btn" (click)="editBook(book)">Edit</button>
+                    <button class="btn delete-btn" (click)="openDeleteDialog(book.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+    <div *ngIf="showDeleteDialog" class="delete-dialog">
+        <div class="dialog-content">
+            <h3>Are you sure you want to delete this book?</h3>
+            <button class="btn" (click)="deleteBook(deleteBookId)">Yes</button>
+            <button class="btn" (click)="closeDeleteDialog()">No</button>
+        </div>
+    </div>
+</div>
